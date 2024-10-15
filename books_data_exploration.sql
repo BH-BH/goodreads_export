@@ -46,17 +46,17 @@ UPDATE
 	books 
 SET 
 	publisher_cl = CASE 
-						WHEN LOWER(publisher) LIKE '%penguin%' THEN 'Penguin'
-						WHEN LOWER(publisher) LIKE '%simon%' THEN 'Simon & Schuster' -- confirmed no other publisers contain simon
-						WHEN LOWER(publisher) LIKE 'unputdownable%' THEN 'Unputdownable'
-						WHEN LOWER(publisher) LIKE 'orion publishing%' THEN 'Orion Publishing'
-						WHEN LOWER(publisher) LIKE 'canongate books%' THEN 'Canongate Books'
-						WHEN LOWER(publisher) LIKE 'bloomsbury%' THEN 'Bloomsbury Publishing'
-						WHEN publisher = 'WINDMILL BOOKS' THEN 'Windmill Books'
-						WHEN publisher = 'PROFILE BOOKS' THEN 'Profile Books'
-						WHEN publisher = 'HACHETTE' THEN 'Hachette'
-						ELSE publisher
-					END
+			WHEN LOWER(publisher) LIKE '%penguin%' THEN 'Penguin'
+			WHEN LOWER(publisher) LIKE '%simon%' THEN 'Simon & Schuster' -- confirmed no other publisers contain simon
+			WHEN LOWER(publisher) LIKE 'unputdownable%' THEN 'Unputdownable'
+			WHEN LOWER(publisher) LIKE 'orion publishing%' THEN 'Orion Publishing'
+			WHEN LOWER(publisher) LIKE 'canongate books%' THEN 'Canongate Books'
+			WHEN LOWER(publisher) LIKE 'bloomsbury%' THEN 'Bloomsbury Publishing'
+			WHEN publisher = 'WINDMILL BOOKS' THEN 'Windmill Books'
+			WHEN publisher = 'PROFILE BOOKS' THEN 'Profile Books'
+			WHEN publisher = 'HACHETTE' THEN 'Hachette'
+			ELSE publisher
+			END
 
 -- check publisher count with new cleanup column
 SELECT
